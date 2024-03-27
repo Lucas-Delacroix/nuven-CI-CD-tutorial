@@ -29,4 +29,28 @@ Isso elimina qualquer interação humana e deve ser implementado somente após o
 - Job: Série de etapas realizadas em um mesmo ambiente.Por exemplo: job1 - Executar Testes, job2 - Realizar Deploy
 - Action: Menor ação do workflow, pode ser entendido como um comando executado no terminal. 
 
+## Conferindo os resultados do Fluxo de Trabalho
+
+No GitHub.com, navegue até a página principal do repositório. Na página do repositório procure pelo menu **Actions**, nesta tela você verá todos os fluxos de trabalho executados até o momento. 
+
+<div align="center">
+    <img src="images/image-10.png" alt="Descrição da imagem" width="largura_da_imagem"/>
+</div>
+
+Na captura acima podemos observar os 5 estados de um fluxo de trabalho, que podemos entender como: em espera, executando, falhou, cancelado e sucesso nessa ordem.
+
+Abrindo a visualização de alguns desses podemos ver os resultados dos `trabalhos` (`jobs`).
+
+<div align="center">
+    <img src="images/image-11.png" alt="Descrição da imagem" width="largura_da_imagem"/>
+</div>
+
+E verificando dentro desses `jobs` podemos ver as `etapas` (`steps`) do mesmo.
+
+<div align="center">
+    <img src="images/image-12.png" alt="Descrição da imagem" width="largura_da_imagem"/>
+</div>
+
+Estes estão todos descritos no arquivo `.yml` que mencionamos mais acima nessa documentação.
+
 
