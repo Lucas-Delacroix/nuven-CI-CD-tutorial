@@ -36,7 +36,7 @@ def test_perfil(client):
 def test_perfil_email(client):
     response = client.post('/perfil/email', json={"email": "test@example.com", "senha": "123456"})
     assert response.status_code == 200
-    assert b"Email: test@example.com Senha: 123455" in response.data
+    assert b"Email: test@example.com Senha: 123456" in response.data
 
 def test_ver_cep(client):
     response = client.get('/ver-cep/maranguape')
