@@ -12,4 +12,4 @@ jobs:
     - name: Build and run tests
       run: |
         docker-compose up -d
-        docker-compose exec -T flask_app sh -c 'pytest'
+        docker-compose exec -T flask_app sh -c 'pytest tests.py'
