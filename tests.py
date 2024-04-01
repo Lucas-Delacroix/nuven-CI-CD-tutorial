@@ -21,12 +21,12 @@ def test_admin(client):
 def test_soma(client):
     response = client.get('/soma/2/3')
     assert response.status_code == 200
-    assert b"O valor da soma de 2 + 3  5" in response.data
+    assert b"O valor da soma de 2 + 3 = 5" in response.data
 
 def test_numero(client):
     response = client.get('/numero/Joao/123')
     assert response.status_code == 200
-    assert b"Ola Joao, seu numero passado na URL foi:" in response.data
+    assert b"Ola Joao, seu numero passado na URL foi: 123" in response.data
 
 def test_perfil(client):
     response = client.get('/perfil/Joao')
