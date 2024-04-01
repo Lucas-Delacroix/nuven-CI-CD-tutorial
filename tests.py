@@ -13,6 +13,8 @@ def test_home(client):
     assert response.status_code == 200
     assert b"Bem vindo a pagina inicial. Verificando mudancas." in response.data
 
+
+
 def test_admin(client):
     response = client.get('/admin')
     assert response.status_code == 200
