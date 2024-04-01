@@ -1,0 +1,27 @@
+name: Teste Automatozado
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  
+  Rodando-Teste:
+    name: Rodando-Teste
+    timeout-minutes: 1440
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Subindo Aplicação
+        run: docker-compose up --build -d
+
+      - name: Rodando Testes
+        run: docker-compose exec -T flask_app sh -c 'pytest tests.py'
+
+
+
+  
