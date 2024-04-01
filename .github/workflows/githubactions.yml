@@ -4,11 +4,13 @@ on: [push, pull_request]
 
 jobs:
  test:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
     - uses: actions/checkout@v2
+    
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
+    
     - name: Build and run tests
       run: |
         docker-compose up -d
