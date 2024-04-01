@@ -1,12 +1,14 @@
 name: Teste Automatozado
 
 on:
-  push:
+ push:
     branches:
       - develop
-  pull-request:
+ pull_request:
     branches:
       - main
+
+
 
 jobs:
   
